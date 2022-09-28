@@ -1,0 +1,11 @@
+{
+  "runs": 30,
+  "offspringNumber": 100,
+  "popSize": 1000,
+  "generations": 1000,
+  "mutationRate": 0,
+  "seed": 2,
+  "terminationCondition": 0,
+  "instantiationToggle": 2
+}
+
