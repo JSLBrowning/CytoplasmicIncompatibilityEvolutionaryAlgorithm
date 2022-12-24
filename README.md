@@ -74,12 +74,11 @@
 
 ### 1.3
 - Make a results parser.
-
-test 0 parameter optimizations - DONE
-test 1 Instantiate de-novo
-test 2 Instantiate perfect toxins
-Test 3 Instantiate just Dub or Nuc
-Test 4 should encode actual real life CI toxins as instatiates, rather than evolving them against a fake template.
-Test 5 Test alternate sequences and sites
-Test 6 Figure out what factors change the sites
-Writeup
+- Test 0: parameter optimizations (DONE)
+- Test 1: Instantiate de-novo
+- Test 2: Instantiate perfect toxins
+- Test 3: Instantiate just Dub or Nuc
+- Test 4: should encode actual real life CI toxins as instatiates, rather than evolving them against a fake template.
+- Test 5: Test alternate sequences and sites
+- Test 6: Figure out what factors change the sites
+- Writeup
