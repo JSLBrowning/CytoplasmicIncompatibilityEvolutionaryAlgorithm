@@ -251,28 +251,28 @@ class CIEA:
                 child.deletion_mutation()
 
     def mutationDriver(self, timesToMutate):
-        for i in range(0, timesToMutate):
-            for children in self.offspringPool:
-                self.mutateTA(children)
-        for children in self.offspringPool:
-            children.re_evaluateAllFitness()
+        for _ in range(0, timesToMutate):
+            for child in self.offspringPool:
+                self.mutateTA(child)
+        for child in self.offspringPool:
+            child.re_evaluateAllFitness()
 
     # ////SURVIVOR SELECTION METHODS ////////
 
     def SSTruncation(self, immigrants):
         # accounts for immigration ... this would be buggy if you change stuff
         count = 0 + immigrants
-        for children in self.offspringPool:
-            self.TApopulation.append(children)
+        for child in self.offspringPool:
+            self.TApopulation.append(child)
             count += 1
         self.sortTAPopulation()
-        for int in range(0, count):
+        for _ in range(0, count):
             self.TApopulation.pop()
 
     def SSKTourny(self, mew, k):
         # select k, 1 wins, decide what to do
-        for children in self.offspringPool:
-            self.TApopulation.append(children)
+        for child in self.offspringPool:
+            self.TApopulation.append(child)
         if k < mew:
             newPopulation = []
             while len(self.TApopulation) > k - 1 and len(newPopulation) < mew:
