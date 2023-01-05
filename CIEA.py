@@ -119,12 +119,14 @@ class CIEA:
         # Randomly generate acceptable crossover points (then sort them).
         toxin_crossover_points = sorted(random.sample(
             range(1, len(smallest_toxin) - 1), crossover_points))
+        toxin_crossover_points.append(len(smallest_toxin))
         antidote_crossover_points = sorted(random.sample(
             range(1, len(smallest_antidote) - 1), crossover_points))
+        antidote_crossover_points.append(len(smallest_toxin))
 
         # Create a new toxin from the two parents.
         new_toxin = []
-        for i in range(len(toxin_crossover_points)):
+        for i in range(len(toxin_crossover_points) - 1):
             if i % 2 == 0:
                 new_toxin += smallest_toxin[toxin_crossover_points[i]:toxin_crossover_points[i + 1]]
             else:
@@ -132,7 +134,7 @@ class CIEA:
 
         # Create a new antidote from the two parents.
         new_antidote = []
-        for i in range(len(antidote_crossover_points)):
+        for i in range(len(antidote_crossover_points) - 1):
             if i % 2 == 0:
                 new_antidote += smallest_antidote[antidote_crossover_points[i]:antidote_crossover_points[i + 1]]
             else:
