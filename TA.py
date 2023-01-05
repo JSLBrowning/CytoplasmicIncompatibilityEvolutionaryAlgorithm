@@ -185,44 +185,44 @@ class TA:
             newToxinSchema = newToxinSchema + \
                 random.choice(self.codonsNoSTOP) + "CTGCTG" + \
                 random.choice(self.codonsNoSTOP) + "CGT"
-            for i in range(0, 10):
+            for _ in range(0, 10):
                 newToxinSchema = newToxinSchema + \
                     random.choice(self.codonsNoSTOP)
             newToxinSchema = newToxinSchema + "CCGATTATTATTGAACTGAAA"
-            for i in range(0, 21):
+            for _ in range(0, 21):
                 newToxinSchema = newToxinSchema + \
                     random.choice(self.codonsNoSTOP)
             newToxinSchema = newToxinSchema + "GATCTGGTGCTG"
-            for i in range(0, 10):
+            for _ in range(0, 10):
                 newToxinSchema = newToxinSchema + \
                     random.choice(self.codonsNoSTOP)
             newToxinSchema = newToxinSchema + "ATGCATTGGGTGACCCTGGTGATT"
-            for i in range(0, 9):
+            for _ in range(0, 9):
                 newToxinSchema = newToxinSchema + \
                     random.choice(self.codonsNoSTOP)
             newToxinSchema = newToxinSchema + "TATTAT" + \
                 random.choice(self.codonsNoSTOP) + "GATAGCCTG"
-            for i in range(0, 8):
+            for _ in range(0, 8):
                 newToxinSchema = newToxinSchema + \
                     random.choice(self.codonsNoSTOP)
             newToxinSchema = newToxinSchema + "ATT" + random.choice(self.codonsNoSTOP) + random.choice(
                 self.codonsNoSTOP) + random.choice(self.codonsNoSTOP) + "CTG"
-            for i in range(0, 5):
+            for _ in range(0, 5):
                 newToxinSchema = newToxinSchema + \
                     random.choice(self.codonsNoSTOP)
             newToxinSchema = newToxinSchema + "GAT"
-            for i in range(0, 9):
+            for _ in range(0, 9):
                 newToxinSchema = newToxinSchema + \
                     random.choice(self.codonsNoSTOP)
             newToxinSchema = newToxinSchema + "CAGCAG" + random.choice(self.codonsNoSTOP) + "GATGGC" + random.choice(
                 self.codonsNoSTOP) + random.choice(self.codonsNoSTOP) + random.choice(self.codonsNoSTOP) + "TGCGGC"
-            for i in range(0, 4):
+            for _ in range(0, 4):
                 newToxinSchema = newToxinSchema + \
                     random.choice(self.codonsNoSTOP)
             newToxinSchema = newToxinSchema + "GAAAAC"
             self.setToxinSchema(newToxinSchema)
 
-        for integers in range(0, (antidoteLength + 1)//3):
+        for _ in range(0, (antidoteLength + 1)//3):
             newCodon = random.choice(self.codons)
             newAntidoteSchema = newAntidoteSchema + newCodon
         self.setAntidoteSchema(newAntidoteSchema)
